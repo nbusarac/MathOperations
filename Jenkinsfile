@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn clean'
+                sh 'mvn test'
+                sh 'mvn verify -Ptest,coverage'
             }
             post {
                 always {
