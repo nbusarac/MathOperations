@@ -15,14 +15,12 @@ pipeline {
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-        stage('SonarQube analysis') {
-            steps {
-                withSonarQubeEnv('sonar') {
-                    sh '${scannerHome}/bin/sonar-scanner -X'
+                    steps {
+                        junit 'target/surefire-reports/*.xml'
+                        withSonarQubeEnv('sonar') {
+                            sh '${scannerHome}/bin/sonar-scanner -X'
+                        }
+                    }
                 }
             }
         }
