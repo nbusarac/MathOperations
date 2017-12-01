@@ -11,7 +11,6 @@ pipeline {
             steps {
                 sh 'mvn clean'
                 sh 'mvn test'
-                sh 'mvn verify -Ptest,coverage'
             }
             post {
                 always {
