@@ -14,11 +14,9 @@ pipeline {
             }
             post {
                 always {
-                    steps {
-                        junit 'target/surefire-reports/*.xml'
-                        withSonarQubeEnv('sonar') {
-                            sh '${scannerHome}/bin/sonar-scanner -X'
-                        }
+                    junit 'target/surefire-reports/*.xml'
+                    withSonarQubeEnv('sonar') {
+                        sh '${scannerHome}/bin/sonar-scanner -X'
                     }
                 }
             }
