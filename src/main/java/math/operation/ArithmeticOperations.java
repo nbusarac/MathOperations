@@ -24,6 +24,6 @@ public class ArithmeticOperations {
 	
 	public int exponent(int a, int b)
 	{
-        return Math.pow(a,b);
+        return (int) Math.pow(a,b);
 	}
 }
