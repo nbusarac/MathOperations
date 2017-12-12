@@ -22,7 +22,9 @@ pipeline {
             }
         }
         stage('Quality Gate') {
-            def qg = waitForQualityGate()
+            environment {
+                def qg = waitForQualityGate();
+            }
             if (qg.status != 'OK') {
                 error "Pipeline aborted due to quality gate failure: ${qg.status}"
             }
