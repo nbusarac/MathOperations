@@ -46,7 +46,7 @@ public class ArithmeticOperationsTest {
     
         ArithmeticOperations operations = new ArithmeticOperations();
         float actual = operations.divide(6, 2);
-        float expected = 12.0;
+        float expected = 12.0f;
         assertEquals(expected, actual);
         
     }
