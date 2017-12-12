@@ -50,5 +50,16 @@ public class ArithmeticOperationsTest {
         assertEquals(expected, actual,0.0001f);
         
     }
+    
+    @Test
+    public void testMultiply()
+    {
+    
+        ArithmeticOperations operations = new ArithmeticOperations();
+        int actual = operations.power(6, 2);
+        int expected = 36;
+        assertEquals(expected, actual);
+        
+    }
 
 }
