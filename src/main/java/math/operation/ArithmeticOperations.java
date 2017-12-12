@@ -17,7 +17,7 @@ public class ArithmeticOperations {
 		return a*b;
 	}
 	
-	public Double divide(Integer a, Integer b)
+	public float divide(Integer a, Integer b)
 	{
         return a/b;
 	}
