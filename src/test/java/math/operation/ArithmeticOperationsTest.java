@@ -39,5 +39,16 @@ public class ArithmeticOperationsTest {
         assertEquals(expected, actual);
         
     }
+    
+    @Test
+    public void testDivide()
+    {
+    
+        ArithmeticOperations operations = new ArithmeticOperations();
+        float actual = operations.divide(6, 2);
+        float expected = 12.0;
+        assertEquals(expected, actual);
+        
+    }
 
 }
