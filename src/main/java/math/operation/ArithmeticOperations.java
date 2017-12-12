@@ -19,6 +19,6 @@ public class ArithmeticOperations {
 	
 	public float divide(Integer a, Integer b)
 	{
-        return a/b;
+        return (float) a/b;
 	}
 }
