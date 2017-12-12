@@ -22,8 +22,8 @@ public class ArithmeticOperations {
         return (float) a/b;
 	}
 	
-	public Integer exponent(Integer a, Integer b)
+	public int exponent(int a, int b)
 	{
-        return (Integer) Math.pow(a,b);
+        return (int) Math.pow(a,b);
 	}
 }
