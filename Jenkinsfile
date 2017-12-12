@@ -16,7 +16,7 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                     withSonarQubeEnv('sonar') {
-                        sh '${scannerHome}/bin/sonar-scanner -X'
+                        sh '${scannerHome}/bin/sonar-scanner'
                     }
                 }
             }
