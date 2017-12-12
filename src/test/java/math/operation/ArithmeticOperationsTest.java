@@ -17,5 +17,27 @@ public class ArithmeticOperationsTest {
 		assertEquals(expected, actual);
 		
 	}
+	
+	@Test
+    public void testSubstract()
+    {
+    
+        ArithmeticOperations operations = new ArithmeticOperations();
+        Integer actual = operations.substract(6, 2);
+        Integer expected = 4;
+        assertEquals(expected, actual);
+        
+    }
+    
+    @Test
+    public void testMultiply()
+    {
+    
+        ArithmeticOperations operations = new ArithmeticOperations();
+        Integer actual = operations.multiply(6, 2);
+        Integer expected = 12;
+        assertEquals(expected, actual);
+        
+    }
 
 }
