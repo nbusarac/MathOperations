@@ -52,11 +52,11 @@ public class ArithmeticOperationsTest {
     }
     
     @Test
-    public void testMultiply()
+    public void testPower()
     {
     
         ArithmeticOperations operations = new ArithmeticOperations();
-        int actual = operations.power(6, 2);
+        int actual = operations.exponent(6, 2);
         int expected = 36;
         assertEquals(expected, actual);
         
