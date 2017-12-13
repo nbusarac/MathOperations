@@ -12,14 +12,14 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bat '${mvnHome}\\bin\\mvn clean'
-                bat '${mvnHome}\\bin\\mvn test'
+                bat "${mvnHome}\\bin\\mvn clean"
+                bat "${mvnHome}\\bin\\mvn test"
             }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                     withSonarQubeEnv('sonar') {
-                        bat '${scannerHome}\\bin\\sonar-scanner'
+                        bat "${scannerHome}\\bin\\sonar-scanner"
                     }
                 }
             }
