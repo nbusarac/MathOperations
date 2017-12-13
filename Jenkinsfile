@@ -12,14 +12,14 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'mvn clean'
-                sh 'mvn test'
+                bat '${mvnHome}\\bin\\mvn clean'
+                bat '${mvnHome}\\bin\\mvn test'
             }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                     withSonarQubeEnv('sonar') {
-                        sh '${scannerHome}/bin/sonar-scanner'
+                        bat '${scannerHome}\\bin\\sonar-scanner'
                     }
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Quality Gate') {
             steps {
                 script {
-                    sleep 5
+                    sleep 2
                     def qualitygate = waitForQualityGate()
                     if(qualitygate.status != "OK") {
                         error "Pipeline aborted due to quality gate coverage failure: ${qualitygate.status}"
