@@ -4,7 +4,7 @@ pipeline {
     }
 
 
-    agent { label 'master' }
+    agent { label 'WinSlave' }
 
     stages {
         stage('Test') {
