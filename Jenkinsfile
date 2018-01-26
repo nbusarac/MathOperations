@@ -3,6 +3,7 @@ pipeline {
         def javaHome = tool 'JDK8';
         def mvnHome = tool 'Maven3';
         def scannerHome = tool 'sonarScanner';
+        def dummy = "blaBla";
         JAVA_HOME = "${javaHome}";
     }
 
